@@ -7,115 +7,29 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="276.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="612.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Validar">
+      <Button layoutX="107.0" layoutY="255.0" mnemonicParsing="false" text="Validar">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="28.0" layoutY="27.0" prefHeight="27.0" prefWidth="108.0" text="Iniciar sesion">
+      <Label layoutX="88.0" layoutY="45.0" text="Iniciar sesion">
          <font>
-            <Font name="Bell MT Bold" size="16.0" />
+            <Font name="Bell MT" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="149.0" layoutY="32.0" text="Usuario:">
+      <Label layoutX="114.0" layoutY="95.0" text="Usuario:">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="209.0" layoutY="28.0" prefHeight="25.0" prefWidth="142.0" />
-      <TextField layoutX="447.0" layoutY="28.0" />
-      <Label layoutX="372.0" layoutY="32.0" text="Contraseña:">
+      <Label layoutX="104.0" layoutY="169.0" text="Contraseña:">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="132.0" text="Agregar administradores">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="28.0" layoutY="188.0" text="Usuario:">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="28.0" layoutY="270.0" text="Contraseña:">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Label>
-      <TextField layoutX="21.0" layoutY="212.0" />
-      <TextField layoutX="22.0" layoutY="296.0" />
-      <Button layoutX="56.0" layoutY="349.0" mnemonicParsing="false" text="Agregar">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Button>
-      <Label layoutX="242.0" layoutY="132.0" text="Editar administradores">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="290.0" layoutY="163.0" mnemonicParsing="false" text="Editar">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Button>
-      <Label layoutX="465.0" layoutY="132.0" text="Agregar platillos al menú">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="465.0" layoutY="180.0" text="Nombre:">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="465.0" layoutY="237.0" text="Cantidad de calorías:">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="465.0" layoutY="300.0" text="Tiempo de preparación:">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Label>
-      <TextField layoutX="465.0" layoutY="200.0" />
-      <TextField layoutX="465.0" layoutY="258.0" />
-      <TextField layoutX="465.0" layoutY="321.0" />
-      <TextField layoutX="465.0" layoutY="382.0" />
-      <Button layoutX="505.0" layoutY="420.0" mnemonicParsing="false" text="Agregar">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Button>
-      <Label layoutX="465.0" layoutY="362.0" text="Precio:">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="268.0" layoutY="214.0" text="Editar platillos">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="289.0" layoutY="245.0" mnemonicParsing="false" text="Editar">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Button>
-      <Label layoutX="226.0" layoutY="307.0" text="Visualizar la cola de pedidos">
-         <font>
-            <Font name="Bell MT" size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="291.0" layoutY="336.0" mnemonicParsing="false" text="Abrir">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </Button>
+      <TextField layoutX="64.0" layoutY="119.0" />
+      <TextField layoutX="63.0" layoutY="194.0" />
    </children>
 </Pane>
