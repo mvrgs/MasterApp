@@ -16,14 +16,15 @@ public class JSONController {
     public JSONController(){
         this.readJson();
     }
-    public void saveJson(String userName,String userPassword, String userRol){
-        obj.put("usuario", userName);
-        obj.put("password", userPassword);
-        obj.put("rol",userRol);
+    public void saveJson(String name, Integer calorias, Integer tiempo, Integer precio){
+        obj.put("Nombre", name);
+        obj.put("Calorias", calorias);
+        obj.put("Tiempo",tiempo);
+        obj.put("Precio", precio);
 
         this.array.add(obj);
 
-        try (FileWriter file = new FileWriter("users.json")) {
+        try (FileWriter file = new FileWriter("platillos.json")) {
             file.write(this.array.toJSONString());
             file.flush();
         } catch (IOException e) {throw new RuntimeException(e);}
@@ -33,7 +34,7 @@ public class JSONController {
     public void readJson(){
         try {
             JSONParser parser = new JSONParser();
-            JSONArray data = (JSONArray) parser.parse(new FileReader("users.json"));
+            JSONArray data = (JSONArray) parser.parse(new FileReader("platillos.json"));
             this.array = data;
             String json = data.toJSONString();
             System.out.println(json);
