@@ -41,7 +41,6 @@ public class MasterController {
     private JSONController jsonController = new JSONController();
 
 
-
     @FXML
     public void agregarAdmi(){
         if (agregarUsuario.getText().equals("")||agregarContra.getText().equals("")){
@@ -79,12 +78,19 @@ public class MasterController {
 
         // Crear un nuevo elemento para el usuario
         Element nuevoUsuario = doc.createElement("usuario");
-        nuevoUsuario.setAttribute("username", usuario.getUsername());
-        nuevoUsuario.setAttribute("password", usuario.getPassword());
-        nuevoUsuario.setAttribute("rol", usuario.getRol());
-
-        // Agregar el nuevo usuario a la raíz del documento
         raiz.appendChild(nuevoUsuario);
+
+        Element username = doc.createElement("username");
+        username.appendChild(doc.createTextNode(usuario.getUsername()));
+        nuevoUsuario.appendChild(username);
+
+        Element password = doc.createElement("password");
+        password.appendChild(doc.createTextNode(usuario.getPassword()));
+        nuevoUsuario.appendChild(password);
+
+        Element rol = doc.createElement("rol");
+        rol.appendChild(doc.createTextNode(usuario.getRol()));
+        nuevoUsuario.appendChild(rol);
 
         // Guardar los cambios en el archivo XML
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -95,8 +101,10 @@ public class MasterController {
         transformer.transform(source, result);
     }
 
+/*
 
-    /*
+
+
     @FXML
     public void agregarAdmi(){
         if (agregarUsuario.getText().equals("")||agregarContra.getText().equals("")){
@@ -136,13 +144,19 @@ public class MasterController {
         // Agregar cada usuario al documento
         for (Usuario u : usuarios) {
             Element usuario = documento.createElement("usuario");
-
-
-            usuario.setAttribute("username", u.getUsername());
-            usuario.setAttribute("password", u.getPassword());
-            usuario.setAttribute("rol", "Administrador");
-
             raiz.appendChild(usuario);
+
+            Element username = documento.createElement("username");
+            username.appendChild(documento.createTextNode(u.getUsername()));
+            usuario.appendChild(username);
+
+            Element password = documento.createElement("password");
+            password.appendChild(documento.createTextNode(u.getPassword()));
+            usuario.appendChild(password);
+
+            Element rol = documento.createElement("rol");
+            rol.appendChild(documento.createTextNode(u.getRol()));
+            usuario.appendChild(rol);
         }
 
         // Guardar el documento en un archivo XML
@@ -151,8 +165,9 @@ public class MasterController {
         StreamResult result = new StreamResult(new File("usuarios.xml"));
         transformer.transform(source, result);
     }
+    */
 
-     */
+
 
 
     @FXML
