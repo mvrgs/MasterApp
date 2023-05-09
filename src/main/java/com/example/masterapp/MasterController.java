@@ -40,7 +40,6 @@ public class MasterController {
     Label agregarError;
     private JSONController jsonController = new JSONController();
 
-
     @FXML
     public void agregarAdmi(){
         if (agregarUsuario.getText().equals("")||agregarContra.getText().equals("")){
@@ -101,8 +100,7 @@ public class MasterController {
         transformer.transform(source, result);
     }
 
-/*
-
+ /*
 
 
     @FXML
@@ -162,10 +160,11 @@ public class MasterController {
         // Guardar el documento en un archivo XML
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         DOMSource source = new DOMSource(documento);
-        StreamResult result = new StreamResult(new File("usuarios.xml"));
+        StreamResult result = new StreamResult(new File("clientes.xml"));
         transformer.transform(source, result);
     }
-    */
+
+  */
 
 
 

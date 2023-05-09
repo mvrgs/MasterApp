@@ -1,11 +1,15 @@
 package com.example.masterapp;
 
+import java.util.UUID;
+
 public class Platillos {
 
     String nombre;
     Integer calorias;
     Integer tiempo;
     Integer precio;
+    Integer id;
+
 
     public String getNombre() {
         return nombre;
@@ -38,4 +42,8 @@ public class Platillos {
     public void setPrecio(Integer precio) {
         this.precio = precio;
     }
+    public int getId() {
+        return id;
+    }
+
 }
