@@ -27,8 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Clase controller principal
+ */
 public class MainController {
-
+    /**
+     * Declaración de objetos de scene builder
+     */
     @FXML
     TextField inicioUsuario;
     @FXML
@@ -37,13 +42,17 @@ public class MainController {
     Button validarButton;
     @FXML
     Label inicioError;
+    /**
+     * Creación de parboles
+     */
     private ArbolBinarioBusqueda arbolUsuarios = new ArbolBinarioBusqueda();
     private ArbolBinarioBusqueda arbolClientes = new ArbolBinarioBusqueda();
     private ArbolAVL arbolPlatillos = new ArbolAVL();
 
 
-
-
+    /**
+     * Función initialize (Da argumentos cada vez que la aplicación se inicialice
+     */
     @FXML
     public void initialize() {
         cargarPlatillos("platillos.json");
@@ -51,6 +60,10 @@ public class MainController {
         cargarClientes("clientes.xml");
     }
 
+    /**
+     * Función para cargar los platillos del menú
+     * @param nombreArchivo
+     */
     private void cargarPlatillos(String nombreArchivo) {
         try {
             JSONParser parser = new JSONParser();
@@ -71,6 +84,10 @@ public class MainController {
         }
     }
 
+    /**
+     * Función para cargar los usuarios existentes
+     * @param nombreArchivo
+     */
     private void cargarUsuarios (String nombreArchivo) {
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -95,6 +112,10 @@ public class MainController {
             e.printStackTrace();
         }
     }
+    /**
+     * Función para cargar los clientes existentes
+     * @param nombreArchivo
+     */
     private void cargarClientes (String nombreArchivo) {
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -121,8 +142,10 @@ public class MainController {
     }
 
 
-
-
+    /**
+     * Función para iniciar sesión de una cuenta
+     * @throws Exception
+     */
     @FXML
     private void iniciarSesion() throws Exception {
         String username = inicioUsuario.getText();
