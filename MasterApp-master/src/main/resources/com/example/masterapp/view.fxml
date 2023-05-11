@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="276.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.masterapp.MainController">
+   <children>
+      <Button fx:id="validarButton" layoutX="107.0" layoutY="269.0" mnemonicParsing="false" onAction="#iniciarSesion" text="Validar">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="88.0" layoutY="45.0" text="Iniciar sesion">
+         <font>
+            <Font name="Bell MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="95.0" text="Usuario:">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="169.0" text="Contraseña:">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inicioUsuario" layoutX="64.0" layoutY="119.0" />
+      <TextField fx:id="inicioContra" layoutX="63.0" layoutY="194.0" />
+      <Label fx:id="inicioError" layoutX="5.0" layoutY="238.0" prefHeight="17.0" prefWidth="270.0">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
