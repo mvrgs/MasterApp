@@ -72,12 +72,12 @@
             <Font name="Bell MT" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="268.0" layoutY="170.0" text="Editar platillos">
+      <Label layoutX="249.0" layoutY="170.0" text="Administrar platillos">
          <font>
             <Font name="Bell MT" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="286.0" layoutY="203.0" mnemonicParsing="false" text="Editar">
+      <Button layoutX="286.0" layoutY="203.0" mnemonicParsing="false" onAction="#EditarPlatillos" text="Editar">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>

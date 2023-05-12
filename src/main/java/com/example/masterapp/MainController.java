@@ -27,6 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static com.example.masterapp.Main.out;
+
 public class MainController {
 
     @FXML
@@ -131,6 +133,12 @@ public class MainController {
         if (username.isEmpty() || password.isEmpty()) {
             inicioError.setText("Ingrese ambos datos");
         } else {
+            String usuarioIngresado = username;
+            String contraIngresada = password;
+            out.println(usuarioIngresado);
+            out.println(contraIngresada);
+
+            /*
             // Buscar el usuario en ambos árboles
             Usuario usuario = arbolUsuarios.buscar(username, password);
             if (usuario == null) {
@@ -163,6 +171,8 @@ public class MainController {
                 inicioUsuario.clear();
                 inicioContra.clear();
             }
+
+             */
         }
     }
 }
