@@ -25,6 +25,8 @@ import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import static com.example.masterapp.Main.out;
+
 public class MasterController {
 
     @FXML
@@ -51,10 +53,18 @@ public class MasterController {
     private JSONController jsonController = new JSONController();
 
     @FXML
-    public void agregarAdmi(){
+    public void agregarAdmi() throws IOException {
         if (agregarUsuario.getText().equals("")||agregarContra.getText().equals("")){
             agregarError.setText("Debe completar ambos espacios");
         }else {
+            String newUsuario = agregarUsuario.getText();
+            String newPassword = agregarContra.getText();
+
+            out.writeObject("agregarAdmin");
+            out.writeObject(newUsuario);
+            out.writeObject(newPassword);
+
+            /*
             Usuario usuario = new Usuario();
             usuario.setUsername(agregarUsuario.getText());
             usuario.setPassword(agregarContra.getText());
@@ -66,6 +76,8 @@ public class MasterController {
             } catch (Exception e) {
                 agregarError.setText("Error al agregar el administrador");
             }
+
+             */
 
             agregarUsuario.clear();
             agregarContra.clear();
