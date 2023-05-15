@@ -1,23 +1,13 @@
 package com.example.masterapp;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -25,13 +15,10 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class MasterController implements Initializable {
+public class MasterController {
 
     @FXML
     TextField agregarUsuario;
@@ -51,12 +38,6 @@ public class MasterController implements Initializable {
     Button agregarButton;
     @FXML
     Label agregarError;
-    @FXML
-    Label Prueba;
-    @FXML
-    private ListView<String> myListView;
-    String[] food = {"pizza", "sushi", "ramen"};
-    String currentFood;
     private JSONController jsonController = new JSONController();
 
     @FXML
@@ -200,33 +181,13 @@ public class MasterController implements Initializable {
             platillos.setTiempo(Integer.valueOf(platilloTiempo.getText()));
             platillos.setPrecio(Integer.valueOf(platilloPrecio.getText()));
 
+            crearCarpetaPlatillo(platillos.getNombre());
+
             this.jsonController.saveJson(platillos.getNombre(), platillos.getCalorias(), platillos.getTiempo(), platillos.getPrecio());
-            platilloNombre.clear();
-            platilloCalorias.clear();
-            platilloTiempo.clear();
-            platilloPrecio.clear();
 
         }
     }
 
-    @FXML
-    private void EditarPlatillos()  {
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        myListView.getItems().addAll(food);
-        myListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                currentFood = myListView.getSelectionModel().getSelectedItem();
-                Prueba.setText(currentFood);
-            }
-        });
-    }
-    }
-
-    /*
     private void crearCarpetaPlatillo(String nombre){
         File directorio = new File("Platillos\\" + nombre);
         if (!directorio.exists()) {
@@ -238,8 +199,6 @@ public class MasterController implements Initializable {
         }
     }
 
-     */
 
 
-
-
+}

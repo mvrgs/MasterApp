@@ -8,7 +8,7 @@ public class Platillos {
     Integer calorias;
     Integer tiempo;
     Integer precio;
-    Integer id = 0;
+    Integer id;
 
 
     public String getNombre() {
