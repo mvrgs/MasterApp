@@ -9,13 +9,27 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Controlador para JSon
+ */
 public class JSONController {
     JSONObject obj = new JSONObject();
     JSONArray array = new JSONArray();
 
+    /**
+     * Función para lector de JSON files
+     */
     public JSONController(){
         this.readJson();
     }
+
+    /**
+     * Función para escribir sobre el archivo JSon
+     * @param name
+     * @param calorias
+     * @param tiempo
+     * @param precio
+     */
     public void saveJson(String name, Integer calorias, Integer tiempo, Integer precio){
         obj.put("Nombre", name);
         obj.put("Calorias", calorias);
@@ -30,7 +44,9 @@ public class JSONController {
         } catch (IOException e) {throw new RuntimeException(e);}
     }
 
-
+    /**
+     * Función para leer un archivo JSON
+     */
     public void readJson(){
         try {
             JSONParser parser = new JSONParser();
@@ -43,6 +59,10 @@ public class JSONController {
         }
     }
 
+    /**
+     * Función para retornar el arreglo
+     * @return array
+     */
     public JSONArray getLista(){
         return this.array;
     }
