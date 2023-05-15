@@ -45,6 +45,9 @@ public class MasterController {
     Button agregarButton;
     @FXML
     Label agregarError;
+    @FXML
+    static Label nombreUsuario;
+
     private JSONController jsonController = new JSONController();
 
     @FXML
