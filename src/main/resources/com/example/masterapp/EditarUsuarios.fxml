@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="315.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.masterapp.EditarUsuariosController">
+   <children>
+      <TextField fx:id="findUsuario" layoutX="28.0" layoutY="14.0" promptText="Usuario a editar">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font>
+      </TextField>
+      <Button layoutX="103.0" layoutY="52.0" mnemonicParsing="false" text="Buscar">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="28.0" layoutY="101.0" text="Username:">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usuario" layoutX="103.0" layoutY="99.0" />
+      <Label layoutX="30.0" layoutY="144.0" text="Password:">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="179.0" text="Roll:">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contra" layoutX="103.0" layoutY="142.0" />
+      <TextField fx:id="roll" layoutX="103.0" layoutY="177.0" />
+      <Button layoutX="48.0" layoutY="234.0" mnemonicParsing="false" text="Editar">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="170.0" layoutY="234.0" mnemonicParsing="false" text="Regresar">
+         <font>
+            <Font name="Bell MT" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

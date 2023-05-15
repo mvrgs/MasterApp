@@ -1,17 +1,23 @@
 package com.example.masterapp;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -27,7 +33,7 @@ import org.w3c.dom.Element;
 
 import static com.example.masterapp.Main.out;
 
-public class MasterController {
+public class MasterController implements Initializable {
 
     @FXML
     TextField agregarUsuario;
@@ -49,8 +55,11 @@ public class MasterController {
     Label agregarError;
     @FXML
     static Label nombreUsuario;
+    @FXML
+    private ListView<String> myListView;
 
     private JSONController jsonController = new JSONController();
+    String[] usuarios = {};
 
     @FXML
     public void agregarAdmi() throws IOException {
@@ -83,8 +92,15 @@ public class MasterController {
             agregarContra.clear();
         }
     }
-
-
+    public void editarAdmin() throws IOException, ClassNotFoundException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("EditarUsuarios.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.showAndWait();
+    }
 
     public void agregarUsuarioAXML(String nombreArchivo, Usuario usuario) throws Exception {
         // Crear una fábrica de constructores de documentos
@@ -216,6 +232,17 @@ public class MasterController {
     private void EditarPlatillos()  {
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        myListView.getItems().addAll(usuarios);
+        myListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+            }
+        });
+    }
+    }
+
     /*
     private void crearCarpetaPlatillo(String nombre){
         File directorio = new File("Platillos\\" + nombre);
@@ -232,4 +259,4 @@ public class MasterController {
 
 
 
-}
+

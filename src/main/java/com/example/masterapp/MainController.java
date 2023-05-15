@@ -28,8 +28,9 @@ public class MainController {
     private ArbolBinarioBusqueda arbolClientes = new ArbolBinarioBusqueda();
     private ArbolAVL arbolPlatillos = new ArbolAVL();
 
-
-
+    public ArbolBinarioBusqueda getArbolUsuarios() {
+        return arbolUsuarios;
+    }
 
     @FXML
     public void initialize() {

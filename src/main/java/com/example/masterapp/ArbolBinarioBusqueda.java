@@ -1,5 +1,8 @@
 package com.example.masterapp;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ArbolBinarioBusqueda {
     private NodoArbol raiz;
 
@@ -31,7 +34,9 @@ public class ArbolBinarioBusqueda {
         }
     }
 
-
+    public NodoArbol getRaiz() {
+        return raiz;
+    }
 
     public Usuario buscar(String username, String password) {
         return buscar(raiz, new Usuario(username, password, null));
@@ -53,6 +58,21 @@ public class ArbolBinarioBusqueda {
             return buscar(nodo.derecho, usuario);
         }
     }
+    private Usuario buscar(NodoArbol nodo, String usuario) {
+        if (nodo == null) {
+            return null;
+        }
+
+        if (usuario.equals(nodo.usuario.getUsername())){
+            return nodo.usuario;
+        }
+
+        if (nodo.usuario.getUsername().compareTo(usuario) > 0) {
+            return buscar(nodo.izquierdo, usuario);
+        } else {
+            return buscar(nodo.derecho, usuario);
+        }
+    }
 
     private class NodoArbol {
         private Usuario usuario;
@@ -63,6 +83,18 @@ public class ArbolBinarioBusqueda {
             this.usuario = usuario;
             this.izquierdo = null;
             this.derecho = null;
+        }
+
+        public NodoArbol getDerecho() {
+            return derecho;
+        }
+
+        public NodoArbol getIzquierdo() {
+            return izquierdo;
+        }
+
+        public Usuario getUsuario() {
+            return usuario;
         }
     }
 }
