@@ -17,8 +17,10 @@ public class Main extends Application {
         out = new ObjectOutputStream(socket.getOutputStream());
         in = new ObjectInputStream(socket.getInputStream());
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EditarUsuarios.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 276, 317);
+        //FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EditarUsuarios.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ClientView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Inicio de sesion");
         stage.setScene(scene);
         stage.show();

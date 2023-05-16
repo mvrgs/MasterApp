@@ -33,6 +33,9 @@ import org.w3c.dom.Element;
 
 import static com.example.masterapp.Main.out;
 
+/**
+ * Clase controlador para la ventana Master de usuarios
+ */
 public class MasterController implements Initializable {
 
     @FXML
@@ -61,6 +64,10 @@ public class MasterController implements Initializable {
     private JSONController jsonController = new JSONController();
     String[] usuarios = {};
 
+    /**
+     * Función para activar la función de agregar administrador mediante socket
+     * @throws IOException
+     */
     @FXML
     public void agregarAdmi() throws IOException {
         if (agregarUsuario.getText().equals("")||agregarContra.getText().equals("")){
@@ -92,6 +99,12 @@ public class MasterController implements Initializable {
             agregarContra.clear();
         }
     }
+
+    /**
+     * Función que envía a la ventana de edición de usuarios
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public void editarAdmin() throws IOException, ClassNotFoundException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("EditarUsuarios.fxml"));
         Parent root = loader.load();
@@ -205,8 +218,9 @@ public class MasterController implements Initializable {
   */
 
 
-
-
+    /**
+     * Función para agregar los platillos mediante sockets
+     */
     @FXML
     private void agregarPlatillo(){
         if (platilloNombre.getText().equals("")||platilloCalorias.getText().equals("")||platilloTiempo.getText().equals("")||platilloPrecio.getText().equals("")){
