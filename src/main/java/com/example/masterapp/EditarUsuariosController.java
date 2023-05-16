@@ -80,13 +80,17 @@ public class EditarUsuariosController {
     @FXML
     private void delete() throws IOException, ClassNotFoundException {
         out.writeObject("deleteUser");
+        //out.writeObject("Alejandro");
         //out.writeObject(findUsuario.getText());
+        /*
         boolean ready = (boolean) in.readObject();
         if(ready){
             muchoTexto.setText("Eliminado con éxito");
         }else{
             muchoTexto.setText("Usuario no encontrado");
         }
+
+         */
     }
 
     /**
