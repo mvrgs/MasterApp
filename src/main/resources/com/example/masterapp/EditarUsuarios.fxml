@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="315.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.masterapp.EditarUsuariosController">
    <children>
       <TextField fx:id="findUsuario" layoutX="28.0" layoutY="14.0" promptText="Usuario a editar">
@@ -14,7 +13,7 @@
             <Font name="Bell MT" size="16.0" />
          </font>
       </TextField>
-      <Button layoutX="103.0" layoutY="52.0" mnemonicParsing="false" text="Buscar">
+      <Button layoutX="103.0" layoutY="52.0" mnemonicParsing="false" onAction="#user" text="Buscar">
          <font>
             <Font name="Bell MT" size="16.0" />
          </font>
@@ -37,7 +36,7 @@
       </Label>
       <TextField fx:id="contra" layoutX="103.0" layoutY="142.0" />
       <TextField fx:id="roll" layoutX="103.0" layoutY="177.0" />
-      <Button layoutX="48.0" layoutY="234.0" mnemonicParsing="false" text="Editar">
+      <Button layoutX="48.0" layoutY="234.0" mnemonicParsing="false" onAction="#edit" text="Editar">
          <font>
             <Font name="Bell MT" size="16.0" />
          </font>
