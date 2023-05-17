@@ -25,24 +25,11 @@ public class MainController {
     @FXML
     Label inicioError;
     private ArbolBinarioBusqueda arbolUsuarios = new ArbolBinarioBusqueda();
-    private ArbolBinarioBusqueda arbolClientes = new ArbolBinarioBusqueda();
-    private ArbolAVL arbolPlatillos = new ArbolAVL();
-
-    public ArbolBinarioBusqueda getArbolUsuarios() {
-        return arbolUsuarios;
-    }
-
-    @FXML
-    public void initialize() {
-
-    }
 
 
-
-
-
-
-
+    /**Metodo que envia una clave al servidor y la informacion necesaria para que valide los datos,
+     * segun lo que devuelva es la ventana que se despliega
+     */
     @FXML
     private void iniciarSesion() throws IOException, ClassNotFoundException {
         String username = inicioUsuario.getText();

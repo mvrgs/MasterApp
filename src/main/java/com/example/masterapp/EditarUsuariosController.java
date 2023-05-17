@@ -16,10 +16,10 @@ public class EditarUsuariosController {
 
     @FXML
     private TextField usuario;
-    ArbolBinarioBusqueda arbol = ;
 
     public Usuario user(String nombre){
 
+        return null;
     }
 }
 
