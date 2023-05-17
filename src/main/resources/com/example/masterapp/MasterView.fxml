@@ -36,7 +36,7 @@
             <Font name="Bell MT" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="286.0" layoutY="105.0" mnemonicParsing="false" text="Editar">
+      <Button layoutX="286.0" layoutY="105.0" mnemonicParsing="false" onAction="#editarAdmin" text="Editar">
          <font>
             <Font name="Bell MT" size="14.0" />
          </font>
