@@ -24,7 +24,7 @@ public class MainController {
     Button validarButton;
     @FXML
     Label inicioError;
-    private ArbolBinarioBusqueda arbolUsuarios = new ArbolBinarioBusqueda();
+
 
 
     /**Metodo que envia una clave al servidor y la informacion necesaria para que valide los datos,
